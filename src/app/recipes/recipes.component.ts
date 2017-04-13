@@ -8,7 +8,7 @@ import {Recipe} from './recipe.model';
 })
 export class RecipesComponent implements OnInit {
 
-  recipe: Recipe = new Recipe('','','');
+  recipe: Recipe;
 
   constructor() { }
 
@@ -18,7 +18,6 @@ export class RecipesComponent implements OnInit {
   getRecipe(e: Recipe) {
     this.recipe = e;
 
-    console.log(this.recipe);
   }
 
 }
