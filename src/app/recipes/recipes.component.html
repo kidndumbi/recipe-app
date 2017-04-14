@@ -6,7 +6,7 @@
     <app-recipe-detail *ngIf="recipe; else empty" [recipe] = "recipe"></app-recipe-detail>
     <ng-template #empty>Please select a recipe</ng-template>
 
-    <p appBasicHighlight >I SHOULD BE HGHTLIGHT</p>
+    <p appDropdown>I SHOULD BE HGHTLIGHT</p>
     <p appBetterHightlight over = "pink" [notOver] = "'purple'">I SHOULD BE HGHTLIGHT</p>
   </div>
 </div>
