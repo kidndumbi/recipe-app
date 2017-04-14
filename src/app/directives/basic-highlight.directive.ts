@@ -1,10 +1,16 @@
-import { Directive } from '@angular/core';
+import {Directive, ElementRef, OnInit} from '@angular/core';
 
 @Directive({
   selector: '[appBasicHighlight]'
 })
-export class BasicHighlightDirective {
+export class BasicHighlightDirective implements OnInit {
 
-  constructor() { }
+  constructor(private elementRef: ElementRef) {
+
+  }
+
+  ngOnInit() {
+      this.elementRef.nativeElement.style.backgroundColor = 'grey';
+  }
 
 }

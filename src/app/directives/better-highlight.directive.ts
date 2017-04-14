@@ -3,7 +3,7 @@ import { Directive, OnInit, Renderer2, ElementRef, HostListener, HostBinding  } 
 @Directive({
   selector: '[appBetterHightlight]'
 })
-export class BetterHightlightDirective implements OnInit {
+export class BetterHighlightDirective implements OnInit {
 
   @HostBinding('style.backgroundColor') backgroundColor: String = 'transparent';
 

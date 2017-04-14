@@ -5,6 +5,8 @@
   <div class="col-md-7">
     <app-recipe-detail *ngIf="recipe; else empty" [recipe] = "recipe"></app-recipe-detail>
     <ng-template #empty>Please select a recipe</ng-template>
-    <p appBetterHightlight></p>
+
+    <p appBasicHighlight>I SHOULD BE HGHTLIGHT</p>
+    <p appBetterHightlight>I SHOULD BE HGHTLIGHT</p>
   </div>
 </div>
