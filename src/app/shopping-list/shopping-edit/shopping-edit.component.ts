@@ -22,9 +22,11 @@ export class ShoppingEditComponent implements OnInit {
   }
 
   sendData() {
-    if (this.name || this.amount) {
+    if (this.name && this.amount) {
       // this.emitData.emit(new Ingredient(this.name, this.amount));
       this.ShoppingListService.addIngredient(new Ingredient(this.name, this.amount));
+    }else {
+      alert('please select both');
     }
   }
 
