@@ -7,7 +7,7 @@ import {ShoppingListService} from './shopping-list.service';
   selector: 'app-shopping-list',
   templateUrl: './shopping-list.component.html',
   styleUrls: ['./shopping-list.component.css'],
-  providers: [LoggingService, ShoppingListService]
+  providers: [LoggingService]
 })
 export class ShoppingListComponent implements OnInit {
 
@@ -18,19 +18,14 @@ export class ShoppingListComponent implements OnInit {
   constructor(private loggingservice: LoggingService , private ShoppingListService: ShoppingListService) { }
 
   ngOnInit() {
-
     this.ingredients = this.ShoppingListService.getIngredients();
+
+    this.ShoppingListService.ingredientchanged.subscribe(
+      (ingredients: Ingredient[]) => {
+        this.ingredients = ingredients;
+      }
+    );
   }
 
-  getData(e: Ingredient) {
-
-
-    try {
-      this.ingredients.push(e);
-    } catch (ex) {
-      console.log(ex); }
-    this.loggingservice.logStatusChange('Ingredient adding successfully');
-
-  }
 
 }

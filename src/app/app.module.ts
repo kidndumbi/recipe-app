@@ -16,6 +16,7 @@ import { BasicHighlightDirective } from './directives/basic-highlight.directive'
 import { BetterHighlightDirective } from './directives/better-highlight.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import { DropdownDirective } from './directives/dropdown.directive';
+import {ShoppingListService} from "./shopping-list/shopping-list.service";
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { DropdownDirective } from './directives/dropdown.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
