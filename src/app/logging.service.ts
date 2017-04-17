@@ -5,4 +5,8 @@ export class LoggingService {
 
   constructor() { }
 
+  logStatusChange(status: string) {
+    console.log(status);
+  }
+
 }
