@@ -18,12 +18,7 @@ export class RecipeDetailComponent implements OnInit {
 
   addIngredients() {
     console.log(this.recipe.ingredients);
-    for (let i of this.recipe.ingredients) {
-      console.log(i);
-      this.ShopingListService.addIngredient(new Ingredient(i.name.toString(), i.amount));
-    }
-
-      // this.emitData.emit(new Ingredient(this.name, this.amount));
+      this.ShopingListService.addIngredients(this.recipe.ingredients);
 
 
   }
